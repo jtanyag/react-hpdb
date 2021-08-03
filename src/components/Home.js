@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Grid from './Grid';
 import Thumb from './Thumb';
+import HeroImage from './HeroImage';
 
 const Home = () => {
   const [characters, setCharacters] = useState([]);
@@ -24,6 +25,7 @@ const Home = () => {
 
   return (
     <div>
+      <HeroImage />
       <Grid>
         {characters.map(character => (
           <Thumb
