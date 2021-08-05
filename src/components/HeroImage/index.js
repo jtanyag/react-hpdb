@@ -1,4 +1,3 @@
-import Thumb from '../Thumb';
 import { Wrapper, Content, Text } from './HeroImage.styles';
 
 const HeroImage = ({ activeCharacter }) => {
@@ -7,7 +6,7 @@ const HeroImage = ({ activeCharacter }) => {
     <Wrapper>
       {Object.keys(activeCharacter).length > 0 ? (
         <Content>
-          <Thumb image={activeCharacter.image} name={activeCharacter.name} />
+          <img src={activeCharacter.image} alt={activeCharacter.name} />
           <Text>
             <h1>{activeCharacter.name}</h1>
             <h3>{activeCharacter.house}</h3>

@@ -15,9 +15,23 @@ export const Content = styled.div`
   margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 20px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
   align-items: center;
 
+  img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+`;
+  
+  export const Text = styled.div`
+  color: white;
+  padding: 20px;
+  font-size: 1.2rem;
+  
   h1 {
     font-size: 2.5rem;
   }
@@ -25,20 +39,14 @@ export const Content = styled.div`
   h3 {
     font-size: 1.5rem;
   }
-`;
-
-export const Text = styled.div`
-  color: white;
-  padding: 20px;
-  font-size: 1.2rem;
 
   .characterInfo {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2rem;
   }
-
+  
   .characterInfoCol {
     padding: 20px;
   }
-`;
+  `;
