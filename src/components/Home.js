@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Grid from './Grid';
 import Thumb from './Thumb';
 import HeroImage from './HeroImage';
@@ -23,15 +23,21 @@ const Home = () => {
     fetchCharacters();
   }, []);
 
+  const HeroImageRef = useRef(null);
+
   const getCharacter = (e) => {
     const name = e.currentTarget.alt;
     const index = characters.findIndex(char => char.name === name);
-    setActiveCharacter(characters[index])
+    setActiveCharacter(characters[index]);
+    window.scrollTo({
+      top: HeroImageRef.current,
+      behavior: 'smooth'
+    });
   }
 
   return (
     <div>
-      <HeroImage activeCharacter={activeCharacter} />
+      <HeroImage activeCharacter={activeCharacter} ref={HeroImageRef} />
       <Grid>
         {characters.map(character => (
           <Thumb
