@@ -44,6 +44,7 @@ const Home = () => {
             key={character.name}
             image={character.image}
             name={character.name}
+            actor={character.actor}
             getCharacter={getCharacter}
           />
         ))}
