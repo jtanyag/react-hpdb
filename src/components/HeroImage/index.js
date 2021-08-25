@@ -1,26 +1,26 @@
 import { Wrapper, Content, Text } from './HeroImage.styles';
 
-const HeroImage = ({ activeCharacter }) => {
+const HeroImage = ({ activeCharacter, image, name, house, dateOfBirth, ancestry, patronus, wand }) => {
 
   return (
     <Wrapper>
       {Object.keys(activeCharacter).length > 0 ? (
         <Content>
-          <img src={activeCharacter.image} alt={activeCharacter.name} />
+          <img src={image} alt={name} />
           <Text>
-            <h1>{activeCharacter.name}</h1>
-            <h3>{activeCharacter.house || 'n/a'}</h3>
+            <h1>{name}</h1>
+            <h3>{house || 'n/a'}</h3>
             <div className='characterInfo'>
               <div className='characterInfoCol'>
-                <p>Date of birth: {activeCharacter.dateOfBirth || 'n/a'}</p>
-                <p>Ancestry: {activeCharacter.ancestry || 'n/a'}</p>
-                <p>Patronus: {activeCharacter.patronus || 'n/a'}</p>
+                <p>Date of birth: {dateOfBirth || 'n/a'}</p>
+                <p>Ancestry: {ancestry || 'n/a'}</p>
+                <p>Patronus: {patronus || 'n/a'}</p>
               </div>
               <div className='characterInfoCol'>
                   <p>Wand:</p>
-                  <p>Wood: {activeCharacter.wand.wood || 'n/a'}</p>
-                  <p>Core: {activeCharacter.wand.core || 'n/a'}</p>
-                  <p>Length: {activeCharacter.wand.length || 'n/a'}</p>
+                  <p>Wood: {wand.wood || 'n/a'}</p>
+                  <p>Core: {wand.core || 'n/a'}</p>
+                  <p>Length: {wand.length || 'n/a'}</p>
               </div>
             </div>
           </Text>

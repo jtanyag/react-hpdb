@@ -37,7 +37,16 @@ const Home = () => {
 
   return (
     <div>
-      <HeroImage activeCharacter={activeCharacter} ref={HeroImageRef} />
+      <HeroImage
+        activeCharacter={activeCharacter}
+        image={activeCharacter.image}
+        name={activeCharacter.name}
+        house={activeCharacter.house}
+        dateOfBirth={activeCharacter.dateOfBirth}
+        ancestry={activeCharacter.ancentry}
+        patronus={activeCharacter.patronus}
+        wand={activeCharacter.wand}
+        ref={HeroImageRef} />
       <Grid>
         {characters.map(character => (
           <Thumb
