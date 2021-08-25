@@ -9,18 +9,18 @@ const HeroImage = ({ activeCharacter }) => {
           <img src={activeCharacter.image} alt={activeCharacter.name} />
           <Text>
             <h1>{activeCharacter.name}</h1>
-            <h3>{activeCharacter.house}</h3>
+            <h3>{activeCharacter.house || 'n/a'}</h3>
             <div className='characterInfo'>
               <div className='characterInfoCol'>
-                <p>Date of birth: {activeCharacter.dateOfBirth}</p>
-                <p>Ancestry: {activeCharacter.ancestry}</p>
-                <p>Patronus: {activeCharacter.patronus}</p>
+                <p>Date of birth: {activeCharacter.dateOfBirth || 'n/a'}</p>
+                <p>Ancestry: {activeCharacter.ancestry || 'n/a'}</p>
+                <p>Patronus: {activeCharacter.patronus || 'n/a'}</p>
               </div>
               <div className='characterInfoCol'>
                   <p>Wand:</p>
-                  <p>Wood: {activeCharacter.wand.wood}</p>
-                  <p>Core: {activeCharacter.wand.core}</p>
-                  <p>Length: {activeCharacter.wand.length}</p>
+                  <p>Wood: {activeCharacter.wand.wood || 'n/a'}</p>
+                  <p>Core: {activeCharacter.wand.core || 'n/a'}</p>
+                  <p>Length: {activeCharacter.wand.length || 'n/a'}</p>
               </div>
             </div>
           </Text>
